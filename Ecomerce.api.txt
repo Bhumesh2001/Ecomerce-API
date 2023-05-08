@@ -1,0 +1,76 @@
+*********** Ecomerce API ***********
+
+1. Coustomer Registration 
+
+    http method : post
+
+    http://localhost:9400/CreateUser
+
+    data = {
+        "Name":"akash",
+        "Email":"akash@gmail.com",
+        "Password":"Akash@234",
+        "PhoneNo":6789065432,
+        "State":"MP"
+    }
+
+2. Coustomer Login 
+
+    http method :- get  
+
+    http://localhost:9400/LoginUser
+
+    // you can login your account by phone number or email 
+
+    {
+        // "Email":"bhumesh@gmail.com"
+        "PhoneNo": 7066233675
+    }
+
+3. Add Product 
+
+    http method :- post
+
+    http://localhost:9400/Add/Product
+
+    data =  {
+        "Name": "EOS R5",
+        "Brand": "Canon",
+        "Price": 320000,
+        "Quantity":10,
+        "Description": "A high-end camera from Canon.",
+        "InStock": true,
+        "Colors":["Black"]
+    }
+
+4. See All Product 
+
+    http method :- get
+
+    http://localhost:9400/See/AllProducts
+
+    you will get all product 
+
+
+5. Change Quantity of the product 
+
+    http method :- patch 
+
+    http://localhost:9400/Change/quantity
+
+    data = {
+        "Name":"MacBook Pro",
+        "Quantity":30
+    }
+
+
+6. Add to Cart 
+
+    http  method :- post
+
+    http://localhost:9400/Add/Cart
+
+    data = {
+        "ProductId":"6454ce708dc7f9ca97911c91",
+        "Quantity": 1   
+    }
